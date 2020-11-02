@@ -20,11 +20,11 @@
         android:layout_width="160dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
+        android:contentDescription="@string/dice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/dice_1"
-        android:contentDescription="TODO" />
+        tools:srcCompat="@drawable/dice_1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
