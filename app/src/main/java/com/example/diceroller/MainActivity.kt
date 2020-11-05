@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener { rollDice() }
-
-        rollDice()
     }
 
     private fun rollDice() {
