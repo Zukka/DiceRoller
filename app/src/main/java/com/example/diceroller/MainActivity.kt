@@ -4,9 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import java.lang.Math.random
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val diceRoll = { (1..6).random() }
         diceImage = findViewById(R.id.imageView)
         diceImage.setImageResource(R.drawable.dice_2)
-        val drawableResourse = when (diceRoll()) {
+        val drawableResource = when (diceRoll()) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
@@ -32,14 +29,12 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        diceImage.setImageResource(drawableResourse)
+        diceImage.setImageResource(drawableResource)
         diceImage.contentDescription = diceRoll.toString()
     }
 }
 
 class Dice(private val numSides: Int) {
 
-    fun roll(): Int {
-        return (1..numSides).random()
-    }
+    fun roll() = (1..numSides).random()
 }
